@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = 3000;
 
-const home = require("./routes/home")
+const home = require("./src/routes/home")
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
