@@ -4,7 +4,8 @@ const logger = require("./config/winston")
 const app = express()
 
 app.get('/', (req, res) => {
-  logger.info('GET /')
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress 
+  logger.info(`GET / | ${ip}`)
   res.sendStatus(200)
 })
 

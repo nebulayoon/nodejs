@@ -21,7 +21,7 @@ const logger = winston.createLogger({
     logFormat,
   ),
   transports: [
-    new winstonDaily({ //info 레벨 로그를 저장할 파일 설정
+    new winstonDaily({ //info 레벨 이상 로그 저장할 파일 설정(error, warn, info)
       level: "info",
       datePattern: 'YYYY-MM-DD',
       dirname: logDir,
@@ -29,7 +29,7 @@ const logger = winston.createLogger({
       maxFiles: 30, //30일치 로그 파일 저장
       zippedArchive:  true
     }),
-    new winstonDaily({ //error 레벨 로그를 저장할 파일 설정
+    new winstonDaily({ //error 레벨 이상 로그를 저장할 파일 설정(error)
       level: 'error',
       datePattern: 'YYYY-MM-DD',
       dirname: logDir + '/error',
