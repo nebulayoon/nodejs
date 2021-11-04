@@ -11,7 +11,11 @@ passport.use(new GoogleStrategy({
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
+<<<<<<< HEAD
     console.log(profile)
+=======
+    //DB call
+>>>>>>> b3a4b28c007ac9db8d52afc9d0dba85a42ad3de8
     return done(null, profile);
   }
 ));
