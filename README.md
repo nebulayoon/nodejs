@@ -3,4 +3,4 @@
 
 # public api test
 https://sentim-api.herokuapp.com/ \
-https://gameofthronesquotes.xyz/  \
+https://gameofthronesquotes.xyz/  
