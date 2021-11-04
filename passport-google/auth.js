@@ -11,6 +11,7 @@ passport.use(new GoogleStrategy({
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
+    console.log(profile)
     return done(null, profile);
   }
 ));
@@ -22,3 +23,5 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
   done(null, user)
 })
+
+// provider, id, email, Name

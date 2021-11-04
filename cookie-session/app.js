@@ -1,9 +1,9 @@
-var express = require('express')
-var parseurl = require('parseurl')
-var session = require('express-session')
-var FileStore = require('session-file-store')(session)
+const express = require('express')
+const parseurl = require('parseurl')
+const session = require('express-session')
+const FileStore = require('session-file-store')(session)
 
-var app = express()
+const app = express()
 
 app.use(session({ //세션 미들웨어는 req에 session이라는 객체를 추가한다.
   secret: 'keyboard cat',  //실제서버에서는 변수처리를 하거나 따른 파일로 만들어야함(?)
